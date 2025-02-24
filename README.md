@@ -1,0 +1,2 @@
+# Lab_Computacion_Grafica
+ Practicas_Compu_Grafica
