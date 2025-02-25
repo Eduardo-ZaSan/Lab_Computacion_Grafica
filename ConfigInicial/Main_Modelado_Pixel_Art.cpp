@@ -21,7 +21,7 @@
 void Inputs(GLFWwindow* window);
 
 
-const GLint WIDTH = 800, HEIGHT = 600;
+const GLint WIDTH = 1000, HEIGHT = 800;
 float movX = 0.0f;
 float movY = 0.0f;
 float movZ = -5.0f;
@@ -37,7 +37,7 @@ int main() {
 
 	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
-	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Modelado geometrico", nullptr, nullptr);
+	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Practica 4 Modelado Eduardo Zavala Sanchez", nullptr, nullptr);
 
 	int screenWidth, screenHeight;
 
