@@ -120,12 +120,12 @@ int main() {
 		-0.5f, -0.5f,  0.5f, 0.0f, 1.0f,1.0f,
 		-0.5f, -0.5f, -0.5f, 0.0f, 1.0f,1.0f,
 
-		-0.5f,  0.5f, -0.5f, 1.0f, 0.2f,0.5f,
-		0.5f,  0.5f, -0.5f,  1.0f, 0.2f,0.5f,
-		0.5f,  0.5f,  0.5f,  1.0f, 0.2f,0.5f,
-		0.5f,  0.5f,  0.5f,  1.0f, 0.2f,0.5f,
-		-0.5f,  0.5f,  0.5f, 1.0f, 0.2f,0.5f,
-		-0.5f,  0.5f, -0.5f, 1.0f, 0.2f,0.5f,
+		-0.5f,  0.5f, -0.5f, 0.0745f, 0.5059f,0.7137f,
+		0.5f,  0.5f, -0.5f,  0.0745f, 0.5059f,0.7137f,
+		0.5f,  0.5f,  0.5f,  0.0745f, 0.5059f,0.7137f,
+		0.5f,  0.5f,  0.5f,  0.0745f, 0.5059f,0.7137f,
+		-0.5f,  0.5f,  0.5f, 0.0745f, 0.5059f,0.7137f,
+		-0.5f,  0.5f, -0.5f, 0.0745f, 0.5059f,0.7137f,
 		//NEGRO
 			-0.5f, -0.5f, 0.5f, 0.0f, 0.0f,0.0f,//Front
 		0.5f, -0.5f, 0.5f,  0.0f, 0.0f,0.0f,
@@ -624,6 +624,12 @@ int main() {
 
 		//CUERPO
 		
+		model = glm::mat4(1.0f);  //Espalda 
+		model = glm::scale(model, glm::vec3(0.6f, 2.2f, 0.4f));
+		model = glm::translate(model, glm::vec3(0.0f, -0.2f, -1.8f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 108, 144);
+		
 		model = glm::mat4(1.0f);  //Abdomen amarillo
 		model = glm::scale(model, glm::vec3(0.6f, 1.4f, 0.2f));
 		model = glm::translate(model, glm::vec3(0.0f, -0.64f, -2.0f));
@@ -666,6 +672,8 @@ int main() {
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glDrawArrays(GL_TRIANGLES, 108, 144);
 
+
+
 		//Patas
 		model = glm::mat4(1.0f); //brazo izquierdo
 		model = glm::scale(model, glm::vec3(0.4f, 0.2f, 0.4f));
@@ -703,6 +711,20 @@ int main() {
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glDrawArrays(GL_TRIANGLES, 108, 104);
 
+		//Patas traseras
+
+		model = glm::mat4(1.0f); //brazo izquierdo
+		model = glm::scale(model, glm::vec3(0.4f, 0.2f, 0.4f));
+		model = glm::translate(model, glm::vec3(-1.75f, -7.5f, -4.75f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 108, 144);
+
+		model = glm::mat4(1.0f); //brazo izquierdo
+		model = glm::scale(model, glm::vec3(0.4f, 0.2f, 0.4f));
+		model = glm::translate(model, glm::vec3(1.75f, -7.5f, -4.75f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 108, 144);
+
 		//Panza Plana
 
 		model = glm::mat4(1.0f); //brazo derecho
@@ -712,17 +734,103 @@ int main() {
 		glDrawArrays(GL_TRIANGLES, 108, 104);
 
 		//Caparazon
-		model = glm::mat4(1.0f); //brazo derecho
-		model = glm::scale(model, glm::vec3(0.6f, 0.8f, 0.8f));
-		model = glm::translate(model, glm::vec3(0.0f, -1.5f, -1.38f));
+		model = glm::mat4(1.0f); //Centro
+		model = glm::scale(model, glm::vec3(0.6f, 0.2f, 0.4f));
+		model = glm::translate(model, glm::vec3(0.0f, -2.5f, -2.8f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glDrawArrays(GL_TRIANGLES, 216, 252);
 
-		model = glm::mat4(1.0f); //brazo derecho
-		model = glm::scale(model, glm::vec3(0.2f, 1.0f, 0.6f));
-		model = glm::translate(model, glm::vec3(-3.0f, 0.0f, -1.38f));
+		model = glm::mat4(1.0f); //Centro
+		model = glm::scale(model, glm::vec3(0.6f, 0.4f, 0.4f));
+		model = glm::translate(model, glm::vec3(0.0f, -2.0f, -3.7f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glDrawArrays(GL_TRIANGLES, 216, 252);
+
+		model = glm::mat4(1.0f); //Centro
+		model = glm::scale(model, glm::vec3(0.6f, 0.6f, 0.2f));
+		model = glm::translate(model, glm::vec3(0.0f, -2.0f, -8.89f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 216, 252);
+
+		model = glm::mat4(1.0f); //orilla
+		model = glm::scale(model, glm::vec3(0.2f, 1.0f, 0.6f));
+		model = glm::translate(model, glm::vec3(-2.0f, -1.1f, -1.66f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 216, 252);
+
+		model = glm::mat4(1.0f); //orilla pequena
+		model = glm::scale(model, glm::vec3(0.2f, 0.8f, 0.2f));
+		model = glm::translate(model, glm::vec3(-2.0f, -1.5f, -6.9f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 216, 252);
+
+		model = glm::mat4(1.0f); //orilla aun mas pequena
+		model = glm::scale(model, glm::vec3(0.2f, 0.6f, 0.2f));
+		model = glm::translate(model, glm::vec3(-2.0f, -2.165f, -7.9f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 216, 252);
+
+		model = glm::mat4(1.0f); //orilla la mas pequena
+		model = glm::scale(model, glm::vec3(0.2f, 0.4f, 0.2f));
+		model = glm::translate(model, glm::vec3(-2.0f, -3.5f, -8.9f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 216, 252);
+
+		model = glm::mat4(1.0f); //orilla
+		model = glm::scale(model, glm::vec3(0.2f, 1.0f, 0.6f));
+		model = glm::translate(model, glm::vec3(2.0f, -1.1f, -1.66f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 216, 252);
+
+		model = glm::mat4(1.0f); //orilla pequena
+		model = glm::scale(model, glm::vec3(0.2f, 0.8f, 0.2f));
+		model = glm::translate(model, glm::vec3(2.0f, -1.5f, -6.9f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 216, 252);
+
+		model = glm::mat4(1.0f); //orilla aun mas pequena
+		model = glm::scale(model, glm::vec3(0.2f, 0.6f, 0.2f));
+		model = glm::translate(model, glm::vec3(2.0f, -2.165f, -7.9f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 216, 252);
+
+		model = glm::mat4(1.0f); //orilla la mas pequena
+		model = glm::scale(model, glm::vec3(0.2f, 0.4f, 0.2f));
+		model = glm::translate(model, glm::vec3(2.0f, -3.5f, -8.9f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 216, 252);
+
+		/////////////////////////
+
+		model = glm::mat4(1.0f); //orilla la mas pequena
+		model = glm::scale(model, glm::vec3(0.2f, 0.4f, 0.2f));
+		model = glm::translate(model, glm::vec3(3.0f, -2.5f, -6.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 216, 252);
+
+		model = glm::mat4(1.0f); //orilla la mas pequena
+		model = glm::scale(model, glm::vec3(0.2f, 0.4f, 0.2f));
+		model = glm::translate(model, glm::vec3(3.0f, -3.0f, -7.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 216, 252);
+
+		model = glm::mat4(1.0f); //orilla la mas pequena
+		model = glm::scale(model, glm::vec3(0.2f, 0.4f, 0.2f));
+		model = glm::translate(model, glm::vec3(-3.0f, -2.5f, -6.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 216, 252);
+
+		model = glm::mat4(1.0f); //orilla la mas pequena
+		model = glm::scale(model, glm::vec3(0.2f, 0.4f, 0.2f));
+		model = glm::translate(model, glm::vec3(-3.0f, -3.0f, -7.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 216, 252);
+		//Piso
+		model = glm::mat4(1.0f); //orilla la mas pequena
+		model = glm::scale(model, glm::vec3(20.0f, 0.6f, 20.0f));
+		model = glm::translate(model, glm::vec3(0.0f, -3.2f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 0, 36);
 
 		glBindVertexArray(0);
 
