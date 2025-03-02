@@ -31,7 +31,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main_Modelado_Pixel_Art.cpp">
+    <ClCompile Include="Modelado_Jerarquico.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>
