@@ -419,29 +419,29 @@ int main() {
 		 rot += 0.018f;
 	 if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS)
 		 rot -= 0.018f;
-	 if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS)
+	 if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS &&hombro<90.0f)
 		 hombro += 0.018f;
-	 if (glfwGetKey(window, GLFW_KEY_F) == GLFW_PRESS)
+	 if (glfwGetKey(window, GLFW_KEY_F) == GLFW_PRESS && hombro > -90.0)
 		 hombro -= 0.018f;
-	 if (glfwGetKey(window, GLFW_KEY_T) == GLFW_PRESS)
+	 if (glfwGetKey(window, GLFW_KEY_T) == GLFW_PRESS &&codo < 5.0f)
 		 codo += 0.018f;
-	 if (glfwGetKey(window, GLFW_KEY_G) == GLFW_PRESS)
+	 if (glfwGetKey(window, GLFW_KEY_G) == GLFW_PRESS && codo > -90.0f)
 		 codo -= 0.018f;
 	 if (glfwGetKey(window, GLFW_KEY_Y) == GLFW_PRESS && muneca<50.0f)
 		 muneca += 0.18f;
 	 if (glfwGetKey(window, GLFW_KEY_H) == GLFW_PRESS && muneca > -50.0f)
 		 muneca -= 0.18f;
-	 if (glfwGetKey(window, GLFW_KEY_U) == GLFW_PRESS &&dedo1<35.0f)
+	 if (glfwGetKey(window, GLFW_KEY_U) == GLFW_PRESS &&dedo1<45.0f)
 		 dedo1 += 0.18f;
-	 if (glfwGetKey(window, GLFW_KEY_J) == GLFW_PRESS)
+	 if (glfwGetKey(window, GLFW_KEY_J) == GLFW_PRESS && dedo1 > -15.0f)
 		 dedo1 -= 0.18f;
-	 if (glfwGetKey(window, GLFW_KEY_I) == GLFW_PRESS)
+	 if (glfwGetKey(window, GLFW_KEY_I) == GLFW_PRESS && dedo2 < 15.0f)
 		 dedo2 += 0.18f;
-	 if (glfwGetKey(window, GLFW_KEY_K) == GLFW_PRESS)
+	 if (glfwGetKey(window, GLFW_KEY_K) == GLFW_PRESS && dedo2 > -70.0f)
 		 dedo2 -= 0.18f;
-	 if (glfwGetKey(window, GLFW_KEY_O) == GLFW_PRESS)
+	 if (glfwGetKey(window, GLFW_KEY_O) == GLFW_PRESS && dedo5 <45.0f)
 		 dedo5 += 0.18f;
-	 if (glfwGetKey(window, GLFW_KEY_L) == GLFW_PRESS)
+	 if (glfwGetKey(window, GLFW_KEY_L) == GLFW_PRESS && dedo5 > -15.0f)
 		 dedo5 -= 0.18f;
  }
 
