@@ -31,7 +31,8 @@ codo = 0.0f,
 muneca = 0.0f,
 dedo1 = 0.0f,
 dedo2 = 0.0f,
-dedo5 = 0.0f;
+dedo5A = 0.0f,
+dedo5B = 0.0f;
 
 int main() {
 	glfwInit();
@@ -366,7 +367,7 @@ int main() {
 
 		//Model Dedo5 A
 		model = glm::translate(modelTemp3, glm::vec3(0.15f, -0.35f, 0.56f));
-		model = glm::rotate(model, glm::radians(dedo5), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::rotate(model, glm::radians(dedo5A), glm::vec3(0.0f, 1.0f, 0.0f));
 		modelTemp = model = glm::translate(model, glm::vec3(0.25f, 0.0f, 0.0f));
 		model = glm::scale(model, glm::vec3(0.5f, 0.15f, 0.125f));
 		color = glm::vec3(0.0f, 1.0f, 1.0f);
@@ -376,7 +377,7 @@ int main() {
 
 		//Mdel Dedo5 B
 		model = glm::translate(modelTemp, glm::vec3(0.25f, 0.0f, 0.0f));
-		model = glm::rotate(model, glm::radians(dedo5), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::rotate(model, glm::radians(dedo5B), glm::vec3(0.0f, 1.0f, 0.0f));
 		modelTemp = model = glm::translate(model, glm::vec3(0.25f, 0.0f, 0.0f));
 		model = glm::scale(model, glm::vec3(0.5f, 0.15f, 0.125f));
 		color = glm::vec3(1.0f, 0.0f, 1.0f);
@@ -429,7 +430,7 @@ int main() {
 		 codo -= 0.018f;
 	 if (glfwGetKey(window, GLFW_KEY_Y) == GLFW_PRESS && muneca<50.0f)
 		 muneca += 0.18f;
-	 if (glfwGetKey(window, GLFW_KEY_H) == GLFW_PRESS && muneca > -50.0f)
+	 if (glfwGetKey(window, GLFW_KEY_H) == GLFW_PRESS && muneca > -90.0f)
 		 muneca -= 0.18f;
 	 if (glfwGetKey(window, GLFW_KEY_U) == GLFW_PRESS &&dedo1<45.0f)
 		 dedo1 += 0.18f;
@@ -439,10 +440,14 @@ int main() {
 		 dedo2 += 0.18f;
 	 if (glfwGetKey(window, GLFW_KEY_K) == GLFW_PRESS && dedo2 > -70.0f)
 		 dedo2 -= 0.18f;
-	 if (glfwGetKey(window, GLFW_KEY_O) == GLFW_PRESS && dedo5 <45.0f)
-		 dedo5 += 0.18f;
-	 if (glfwGetKey(window, GLFW_KEY_L) == GLFW_PRESS && dedo5 > -15.0f)
-		 dedo5 -= 0.18f;
+	 if (glfwGetKey(window, GLFW_KEY_O) == GLFW_PRESS && dedo5A <45.0f)
+		 dedo5A += 0.18f;
+	 if (glfwGetKey(window, GLFW_KEY_L) == GLFW_PRESS && dedo5A > -90.0f)
+		 dedo5A -= 0.18f;
+	 if (glfwGetKey(window, GLFW_KEY_M) == GLFW_PRESS && dedo5B < 45.0f)
+		 dedo5B += 0.18f;
+	 if (glfwGetKey(window, GLFW_KEY_N) == GLFW_PRESS && dedo5B > -30.0f)
+		 dedo5B -= 0.18f;
  }
 
 
