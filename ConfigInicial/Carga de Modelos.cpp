@@ -100,6 +100,8 @@ int main( )
     Model fogata((char*)"Models/Fogata.obj");
     Model Snowman((char*)"Models/snowman_finish.obj");
     Model dog((char*)"Models/RedDog.obj");
+    Model Igloo((char*)"Models/Igloo.obj");
+    Model Pinguino((char*)"Models/Pinguino.obj");
     glm::mat4 projection = glm::perspective( camera.GetZoom( ), ( float )SCREEN_WIDTH/( float )SCREEN_HEIGHT, 0.1f, 100.0f );
     
   
@@ -141,11 +143,15 @@ int main( )
         glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
         fogata.Draw(shader);
        
-        model = glm::translate(model, glm::vec3(0.5f, 1.0f, 0.5f));
+        model = glm::translate(model, glm::vec3(0.5f, 1.0f, -10.0f));
         model = glm::scale(model, glm::vec3(5.0f, 5.0f, 5.0f));
         glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
         Snowman.Draw(shader);
 
+        model = glm::translate(model, glm::vec3(0.5f, -0.3f, 1.5f));
+        model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));
+        glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
+        Pinguino.Draw(shader);
         
 
         // Swap the buffers
