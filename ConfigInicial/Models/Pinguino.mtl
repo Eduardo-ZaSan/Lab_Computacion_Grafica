@@ -8,6 +8,5 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd Penguin_Tris_Diffuse.png
-map_Ns Penguin_Tris_Roughness.png
-map_Bump -bm 1.000000 Penguin_Tris_Normal.png
+	map_Ka ball.png
+	map_Kd ball.png

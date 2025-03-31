@@ -162,7 +162,7 @@ int main()
 	
 	Model Dog((char*)"Models/ball.obj");
 	Model Piso((char*)"Models/piso.obj");
-
+	Model Pingu((char*)"Models/Pinguino.obj");
 
 
 	// First, set the container's VAO (and VBO)
@@ -311,14 +311,20 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Piso.Draw(lightingShader);
 
-
-	
 		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(0.5f, -0.4f, 0.0f));
 		glEnable(GL_BLEND);//Avtiva la funcionalidad para trabajar el canal alfa
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "transparency"), 1);
-	    Dog.Draw(lightingShader);
+		Pingu.Draw(lightingShader);
+	
+		//model = glm::mat4(1);
+		//glEnable(GL_BLEND);//Avtiva la funcionalidad para trabajar el canal alfa
+		//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		//glUniform1i(glGetUniformLocation(lightingShader.Program, "transparency"), 1);
+	 //   Dog.Draw(lightingShader);
 		//glDisable(GL_BLEND);  //Desactiva el canal alfa 
 		glBindVertexArray(0);
 	
