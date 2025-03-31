@@ -160,9 +160,13 @@ int main()
 	Shader lightingShader("Shader/lighting.vs", "Shader/lighting.frag");
 	Shader lampShader("Shader/lamp.vs", "Shader/lamp.frag");
 	
-	Model Dog((char*)"Models/ball.obj");
+	Model Dog((char*)"Models/RedDog.obj");
+	Model Snowman((char*)"Models/snowman_finish.obj");
 	Model Piso((char*)"Models/piso.obj");
+	//Model Casa((char*)"Models/Casa.obj");
 	Model Pingu((char*)"Models/Pinguino.obj");
+	//Model Arbol((char*)"Models/Arbol.obj");
+	Model Fogata((char*)"Models/Fogata.obj");
 
 
 	// First, set the container's VAO (and VBO)
@@ -319,12 +323,49 @@ int main()
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "transparency"), 1);
 		Pingu.Draw(lightingShader);
 	
+		model = glm::mat4(1);
+		glEnable(GL_BLEND);//Avtiva la funcionalidad para trabajar el canal alfa
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform1i(glGetUniformLocation(lightingShader.Program, "transparency"), 0);
+	    Dog.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(0.0f, -0.4f, 0.5f));
+		model = glm::scale(model, glm::vec3(0.3f, 0.3f, 0.3f));
+		glEnable(GL_BLEND);//Avtiva la funcionalidad para trabajar el canal alfa
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform1i(glGetUniformLocation(lightingShader.Program, "transparency"), 0);
+		Fogata.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(0.0f, -0.2f, -0.5f));
+		model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));
+		glEnable(GL_BLEND);//Avtiva la funcionalidad para trabajar el canal alfa
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform1i(glGetUniformLocation(lightingShader.Program, "transparency"), 0);
+		Snowman.Draw(lightingShader);
+
 		//model = glm::mat4(1);
+		//model = glm::translate(model, glm::vec3(0.0f, -0.2f, -3.7f));
+		//model = glm::scale(model, glm::vec3(0.05f, 0.05f, 0.05f));
 		//glEnable(GL_BLEND);//Avtiva la funcionalidad para trabajar el canal alfa
 		//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		//glUniform1i(glGetUniformLocation(lightingShader.Program, "transparency"), 1);
-	 //   Dog.Draw(lightingShader);
+		//glUniform1i(glGetUniformLocation(lightingShader.Program, "transparency"), 0);
+		//Casa.Draw(lightingShader);
+
+		//model = glm::mat4(1);
+		//model = glm::translate(model, glm::vec3(-2.0f, 0.0f, 0.0f));
+		//model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+		//model = glm::rotate(model, 1.0f, glm::vec3(0.0f, 2.0f, 0.0f));
+		//glEnable(GL_BLEND);//Avtiva la funcionalidad para trabajar el canal alfa
+		//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		//glUniform1i(glGetUniformLocation(lightingShader.Program, "transparency"), 0);
+		//Arbol.Draw(lightingShader);
 		//glDisable(GL_BLEND);  //Desactiva el canal alfa 
 		glBindVertexArray(0);
 	
@@ -348,9 +389,11 @@ int main()
 		{
 			model = glm::mat4(1);
 			model = glm::translate(model, pointLightPositions[i]);
-			model = glm::scale(model, glm::vec3(0.2f)); // Make it a smaller cube
+			model = glm::scale(model, glm::vec3(0.0000001f)); // Make it a smaller cube
 			glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 			glBindVertexArray(VAO);
+
+
 			glDrawArrays(GL_TRIANGLES, 0, 36);
 		}
 		glBindVertexArray(0);
@@ -456,7 +499,7 @@ void KeyCallback(GLFWwindow *window, int key, int scancode, int action, int mode
 		active = !active;
 		if (active)
 		{
-			Light1 = glm::vec3(1.0f, 1.0f, 0.0f);
+			Light1 = glm::vec3(1.0f, 0.0f, 0.0f);
 		}
 		else
 		{
