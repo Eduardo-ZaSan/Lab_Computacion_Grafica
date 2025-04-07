@@ -105,8 +105,10 @@ float vertices[] = {
 
 glm::vec3 Light1 = glm::vec3(0);
 //Anim
+float pivote = 0;
 float transBall = 0;
 float rotBall = 0;
+float rotDog = 0;
 bool AnimBall = false;
 bool AnimBall2 = false;
 bool AnimBall3 = false;
@@ -284,8 +286,8 @@ int main()
 
 
 		glm::mat4 model(1);
-
-	
+		glm::mat4 modelTemp(1);
+		glm::mat4 modelTemp2(1);
 		
 		//Carga de modelo 
         view = camera.GetViewMatrix();	
@@ -293,30 +295,37 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Piso.Draw(lightingShader);
 
-		model = glm::mat4(1);
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glUniform1i(glGetUniformLocation(lightingShader.Program, "transparency"), 0);
-		Dog.Draw(lightingShader);
-
-		model = glm::mat4(1);
-		glEnable(GL_BLEND);//Avtiva la funcionalidad para trabajar el canal alfa
-		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glUniform1i(glGetUniformLocation(lightingShader.Program, "transparency"), 1);
-		model = glm::rotate(model, glm::radians(rotBall), glm::vec3(0.0f, 1.0f, 0.0f));
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-	    Ball.Draw(lightingShader); 
-		glDisable(GL_BLEND);  //Desactiva el canal alfa 
-
-		model = glm::mat4(1);
+		////Cambiando el piovote del perro
+		model = glm::rotate(model, glm::radians(rotDog), glm::vec3(0.0f, -1.0, 0.0f)); //Pivote
+		modelTemp = model = glm::translate(model, glm::vec3(1.5f, 0.0f, 1.0f));
 		glEnable(GL_BLEND);//Avtiva la funcionalidad para trabajar el canal alfa
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "transparency"), 1);
 		model = glm::translate(model, glm::vec3(0.0f, transBall, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		Ball.Draw(lightingShader);
+		Dog.Draw(lightingShader);
+
+		model = glm::rotate(model, glm::radians(rotBall), glm::vec3(0.0f, 1.0, 0.0f)); //Pivote
+		modelTemp2 = model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
+		glEnable(GL_BLEND);//Avtiva la funcionalidad para trabajar el canal alfa
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform1i(glGetUniformLocation(lightingShader.Program, "transparency"), 1);
+		model = glm::translate(model, glm::vec3(0.0f, transBall, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+	    Ball.Draw(lightingShader); 
 		glDisable(GL_BLEND);  //Desactiva el canal alfa 
+
+		//model = glm::mat4(1);
+		//glEnable(GL_BLEND);//Avtiva la funcionalidad para trabajar el canal alfa
+		//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		//glUniform1i(glGetUniformLocation(lightingShader.Program, "transparency"), 1);
+		//model = glm::translate(model, glm::vec3(0.0f, transBall, 0.0f));
+		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		//Ball.Draw(lightingShader);
+		//glDisable(GL_BLEND);  //Desactiva el canal alfa 
 
 		glBindVertexArray(0);
 	
@@ -469,7 +478,9 @@ void KeyCallback(GLFWwindow *window, int key, int scancode, int action, int mode
 void Animation() {
 	if (AnimBall)
 	{
-		rotBall += 0.2f;
+		rotBall += 0.02f;
+		rotDog  -= 0.02f;
+		//pivote += 0.2f;
 		//printf("%f", rotBall);
 	}
 	else
@@ -479,7 +490,7 @@ void Animation() {
 	//=========================================
 	//ANIMACION HACIA ARRIBA
 	//========================================
-	if (AnimBall2 && transBall>2)
+	if (AnimBall2 && transBall>1)
 	{
 		transBall -= 0.0002f;
 		AnimBall2 = !AnimBall2;
@@ -487,7 +498,7 @@ void Animation() {
 		//printf("%f", rotBall);
 		
 	}
-	if (AnimBall2 && transBall < 2 && transBall >=0)
+	if (AnimBall2 && transBall < 1 && transBall >=0)
 	{
 		transBall += 0.0002f;
 		//printf("%f", rotBall);
@@ -504,7 +515,7 @@ void Animation() {
 	//=============================
 	//ANIMACION HACIA ABAJO
 	//=============================
-	if (AnimBall3 && transBall > 2)
+	if (AnimBall3 && transBall > 1)
 	{
 		transBall -= 0.0002f;
 		AnimBall3 = !AnimBall3;
@@ -512,7 +523,7 @@ void Animation() {
 		//printf("%f", rotBall);
 
 	}
-	if (AnimBall3 && transBall < 2 && transBall >= 0)
+	if (AnimBall3 && transBall < 1 && transBall >= 0)	
 	{
 		transBall -= 0.0002f;
 		//printf("%f", rotBall);
