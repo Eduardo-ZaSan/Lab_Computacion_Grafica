@@ -1,6 +1,6 @@
 //===================================
 //	Eduardo Zavala Sanchez
-//	Practica Animacion Basica
+//	Practica Animacion Compleja
 //	318105538
 //===================================
 #include <iostream>
@@ -131,7 +131,7 @@ int main()
 	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);*/
 
 	// Create a GLFWwindow object that we can use for GLFW's functions
-	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, " Eduardo Zavala Sanchez Animacion basica", nullptr, nullptr);
+	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, " Eduardo Zavala Sanchez Animacion Compleja", nullptr, nullptr);
 
 	if (nullptr == window)
 	{
@@ -293,6 +293,7 @@ int main()
 		//Carga de modelo 
         view = camera.GetViewMatrix();	
 		model = glm::mat4(1);
+		model = glm::translate(modelTemp, glm::vec3(1.0f, 0.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Piso.Draw(lightingShader);
 
