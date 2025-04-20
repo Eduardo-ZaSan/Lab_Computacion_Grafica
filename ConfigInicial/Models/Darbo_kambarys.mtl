@@ -1,0 +1,440 @@
+# created with pCon.planner
+
+newmtl mat_SKP_Dekoracijosmedis_4d7cc0a1
+Ka 0.69807237 0.63996822 0.55487496
+Kd 1 1 1
+map_Kd e7064484f903e8a2.png
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Dekoracijospadas_4d7cc0a1
+Ka 0.14901961 0.14901961 0.14901961
+Kd 0.14901961 0.14901961 0.14901961
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Durys_4d7cc0a1
+Ka 0.74901962 0.74901962 0.74901962
+Kd 0.74901962 0.74901962 0.74901962
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Halkorpusas_4d7cc0a1
+Ka 0.85882354 0.85882354 0.85882354
+Kd 0.85882354 0.85882354 0.85882354
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Halsviesa_4d7cc0a1
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Kedescromas_4d7cc0a1
+Ka 0.10980392 0.10980392 0.10980392
+Kd 0.10980392 0.10980392 0.10980392
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Kedeskoja_4d7cc0a1
+Ka 0.17647059 0.17647059 0.17647059
+Kd 0.17647059 0.17647059 0.17647059
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Kedesmedziaga_4d7cc0a1
+Ka 0.19222729 0.19222729 0.19222729
+Kd 1 1 1
+map_Kd 406e4f31845d4326.png
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Kedziukojos_4d7cc0a1
+Ka 0.21313567 0.21313567 0.21313567
+Kd 1 1 1
+map_Kd 684a455b32da6098.png
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Kedziumedziaga_4d7cc0a1
+Ka 0.52215105 0.38885602 0.27893764
+Kd 1 1 1
+map_Kd ac73435e6260646c.png
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Klaviatu_877e604c_4d7cc0a1
+Ka 0.12156863 0.28627452 0.2
+Kd 0.12156863 0.28627452 0.2
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Knygospuslapiai_4d7cc0a1
+Ka 0.88627452 0.88627452 0.88627452
+Kd 0.88627452 0.88627452 0.88627452
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Langas_4d7cc0a1
+Ka 0.2 0.2 0.2
+Kd 0.2 0.2 0.2
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Lemposcromas_4d7cc0a1
+Ka 0.64705884 0.66666669 0.68235296
+Kd 0.64705884 0.66666669 0.68235296
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Lemposkorpusas_4d7cc0a1
+Ka 0.20392157 0.20392157 0.20392157
+Kd 0.20392157 0.20392157 0.20392157
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Lemposlaidas_4d7cc0a1
+Ka 0.44705883 0.44705883 0.44705883
+Kd 0.44705883 0.44705883 0.44705883
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Lemposvidus_4d7cc0a1
+Ka 0.98431373 0.98431373 0.98431373
+Kd 0.98431373 0.98431373 0.98431373
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Lubos_4d7cc0a1
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Medisvirtuveje_4d7cc0a1
+Ka 0.32293528 0.27203497 0.23058113
+Kd 1 1 1
+map_Kd 731768c7139d9d3b.png
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Parketas21_4d7cc0a1
+Ka 0.47390211 0.41868114 0.37161988
+Kd 1 1 1
+map_Kd c67d746fdc6d02ff.png
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Pav_4d7cc0a1
+Ka 0.56738889 0.54719794 0.51098031
+Kd 1 1 1
+map_Kd 821caf4d5916ac7a.png
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_PcWindows_4d7cc0a1
+Ka 0.071593963 0.28834811 0.44311646
+Kd 1 1 1
+map_Kd 759708265d96bf28.png
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Pcdezeskorpusas_4d7cc0a1
+Ka 0.2 0.2 0.2
+Kd 0.2 0.2 0.2
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Pcdezesstiklas_4d7cc0a1
+Ka 0.14901961 0.14901961 0.14901961
+Kd 0.14901961 0.14901961 0.14901961
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Pckorpusas_4d7cc0a1
+Ka 0.2 0.2 0.2
+Kd 0.2 0.2 0.2
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Pcmygtukai_4d7cc0a1
+Ka 0.29411766 0.29411766 0.29411766
+Kd 0.29411766 0.29411766 0.29411766
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Peleski_d61c5571_4d7cc0a1
+Ka 0.28627452 0.28627452 0.28627452
+Kd 0.28627452 0.28627452 0.28627452
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Peleski_eab2eae8_4d7cc0a1
+Ka 0.3123011 0.3598291 0.39632496
+Kd 1 1 1
+map_Kd c3d80f01c79bc57f.png
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Plokste1_4d7cc0a1
+Ka 0.50931966 0.45647117 0.39897832
+Kd 1 1 1
+map_Kd d94cb1e1339b53c6.png
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Printeri_524fdb41_4d7cc0a1
+Ka 0.96945137 0.96945137 0.96945137
+Kd 1 1 1
+map_Kd fba942f32cc04a61.png
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Printeri_59db6cf6_4d7cc0a1
+Ka 0.2 0.2 0.2
+Kd 0.2 0.2 0.2
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Printeriojuoda_4d7cc0a1
+Ka 0.18431373 0.18431373 0.18431373
+Kd 0.18431373 0.18431373 0.18431373
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Rankenoscromas_4d7cc0a1
+Ka 0.19215687 0.18431373 0.18431373
+Kd 0.19215687 0.18431373 0.18431373
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Remeliobalta_4d7cc0a1
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Remeliofoto1_4d7cc0a1
+Ka 0.72252566 0.72252566 0.72252566
+Kd 1 1 1
+map_Kd b3f292ffb7ff4af9.png
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Remeliofoto2_4d7cc0a1
+Ka 0.56711757 0.56711757 0.56711757
+Kd 1 1 1
+map_Kd 96e0faea76312af4.png
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Remeliokorpusas_4d7cc0a1
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Rozeteskorpusas_4d7cc0a1
+Ka 0.18431373 0.18431373 0.18431373
+Kd 0.18431373 0.18431373 0.18431373
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Sienos_4d7cc0a1
+Ka 0.84705883 0.84705883 0.84705883
+Kd 0.84705883 0.84705883 0.84705883
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Skylutes_4d7cc0a1
+Ka 0.22745098 0.22745098 0.22745098
+Kd 0.22745098 0.22745098 0.22745098
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Spavasi_80ce4662_4d7cc0a1
+Ka 0.54901963 0.54901963 0.54901963
+Kd 0.54901963 0.54901963 0.54901963
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Staliukometalas_4d7cc0a1
+Ka 0.13725491 0.13725491 0.13725491
+Kd 0.13725491 0.13725491 0.13725491
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Stiklas_4d7cc0a1
+Ka 0 0 0
+Kd 0 0 0
+Ks 0 0 0
+Ns 0
+d 0
+illum 2
+
+newmtl mat_SKP_Vaza1_4d7cc0a1
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Vaza2_4d7cc0a1
+Ka 0.2 0.2 0.2
+Kd 0.2 0.2 0.2
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Vazeliukeramika_4d7cc0a1
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Vazoskeramika_4d7cc0a1
+Ka 0.85882354 0.85882354 0.85882354
+Kd 0.85882354 0.85882354 0.85882354
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Virselis_4d7cc0a1
+Ka 0.58051193 0.61627501 0.654154
+Kd 1 1 1
+map_Kd 6d68bbd6bd10878c.png
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Zaliuziusiulas_4d7cc0a1
+Ka 0.36381528 0.32563844 0.28935012
+Kd 1 1 1
+map_Kd b56a29d545f9fd90.png
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_Zurnalosonai_4d7cc0a1
+Ka 0.89411765 0.89411765 0.89411765
+Kd 0.89411765 0.89411765 0.89411765
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_cp1_4d7cc0a1
+Ka 0.28668001 0.26400971 0.32177743
+Kd 1 1 1
+map_Kd 5ab9104f5748c32.png
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_cp2_4d7cc0a1
+Ka 0.4182559 0.43067536 0.41517451
+Kd 1 1 1
+map_Kd 2763e2fd2ac172d7.png
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_cp3_4d7cc0a1
+Ka 0.34570307 0.33076748 0.31167448
+Kd 1 1 1
+map_Kd a971d35172c45fb8.png
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_cp4_4d7cc0a1
+Ka 0.37866783 0.36768031 0.39643344
+Kd 1 1 1
+map_Kd 1d17fa611f7179df.png
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_cp5_4d7cc0a1
+Ka 0.28720832 0.26442042 0.2414549
+Kd 1 1 1
+map_Kd a6e9c38c9e4437ac.png
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_cp6_4d7cc0a1
+Ka 0.3127428 0.2621181 0.21867409
+Kd 1 1 1
+map_Kd 4956d0ac42993238.png
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_cp7_4d7cc0a1
+Ka 0.27988127 0.26406372 0.25792107
+Kd 1 1 1
+map_Kd c090bea21b482d86.png
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_cp8_4d7cc0a1
+Ka 0.30465624 0.24414603 0.21086748
+Kd 1 1 1
+map_Kd 7d85a9295c281a73.png
+Ks 0 0 0
+Ns 0
+illum 2
+
+newmtl mat_SKP_cp9_4d7cc0a1
+Ka 0.18059801 0.16672841 0.16345942
+Kd 1 1 1
+map_Kd e0dd84054d3c1937.png
+Ks 0 0 0
+Ns 0
+illum 2
+
