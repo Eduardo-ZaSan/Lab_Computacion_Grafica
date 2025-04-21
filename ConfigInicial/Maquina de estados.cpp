@@ -116,6 +116,7 @@ float tail = 0.0f;
 glm::vec3 dogPos (0.0f,0.0f,0.0f);
 float dogRot = 0.0f;
 bool step = false;
+float rotaDog = 0.0f;
 
 
 
@@ -303,6 +304,7 @@ int main()
 		//Carga de modelo 
         view = camera.GetViewMatrix();	
 		model = glm::mat4(1);
+		
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Piso.Draw(lightingShader);
 
@@ -543,10 +545,104 @@ void Animation() {
 			if (RLegs < -15.0f)
 				step = false;
 		}
-		if (dogPos.z > 2.3)
-			dogAnim = 0;
+		if (dogPos.z > 2.3) {
+			dogRot += 90.0;
+			dogAnim = 2;
+		}
+			
 
-		dogPos.z += 0.0001f;
+		dogPos.z += 0.001f;
+		printf("%f", dogPos.z);
+	}
+	if (dogAnim == 2)
+	{
+
+		if (!step) {
+			RLegs += 0.03f;
+			FLegs += 0.03f;
+			head += 0.03f;
+			tail += 0.03f;
+
+			if (RLegs > 15.0f)
+				step = true;
+		}
+		else {
+			RLegs -= 0.03f;
+			FLegs -= 0.03f;
+			head -= 0.03f;
+			tail -= 0.03f;
+
+			if (RLegs < -15.0f)
+				step = false;
+		}
+		if (dogPos.x > 2.3) {
+			dogRot += 90.0;
+			dogAnim = 3;
+		}
+
+
+		dogPos.x += 0.001f;
+		printf("%f", dogPos.z);
+	}
+	if (dogAnim == 3)
+	{
+
+		if (!step) {
+			RLegs += 0.03f;
+			FLegs += 0.03f;
+			head += 0.03f;
+			tail += 0.03f;
+
+			if (RLegs > 15.0f)
+				step = true;
+		}
+		else {
+			RLegs -= 0.03f;
+			FLegs -= 0.03f;
+			head -= 0.03f;
+			tail -= 0.03f;
+
+			if (RLegs < -15.0f)
+				step = false;
+		}
+		if (dogPos.z < -2.3) {
+			dogRot += 135.0;
+			dogAnim = 4;
+		}
+
+
+		dogPos.z -= 0.001f;
+		printf("%f", dogPos.z);
+	}
+	if (dogAnim == 4)
+	{
+
+		if (!step) {
+			RLegs += 0.03f;
+			FLegs += 0.03f;
+			head += 0.03f;
+			tail += 0.03f;
+
+			if (RLegs > 15.0f)
+				step = true;
+		}
+		else {
+			RLegs -= 0.03f;
+			FLegs -= 0.03f;
+			head -= 0.03f;
+			tail -= 0.03f;
+
+			if (RLegs < -15.0f)
+				step = false;
+		}
+		if (dogPos.z >=0 && dogPos.x>=0) {
+			dogRot += 45.0;
+			dogAnim = 0;
+		}
+
+
+		dogPos.z += 0.001f;
+		dogPos.x -= 0.001f;
 		printf("%f", dogPos.z);
 	}
 	
